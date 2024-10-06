@@ -1,0 +1,7 @@
+.indicator{
+    width: 10px;
+    height: 10px;
+    border: 1px black solid;
+    border-radius:1000px;
+    background-color: gray;
+}
