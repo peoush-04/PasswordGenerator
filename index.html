@@ -17,9 +17,9 @@
         <div class="display-container">
             <!-- till now we used class name , id name or tag name to access html in js but now we r using custom attribute to access html element in js  -->
              <!-- here the custom attribute used is named as "data-passwordDisplay" -->
-            <input readonly type="text" name="display" data-passwordDisplay>
-            <button>
-                <span data-copyMsg>Copied</span>
+            <input readonly type="text" name="display" placeholder="PASSWORD">
+            <button data-copy>
+                <span data-copyMsg></span>
                 <img src="./assets/copy.svg" alt="copy" width="23" height="23">
             </button>
         </div>
@@ -29,7 +29,7 @@
             <!-- password length  -->
             <div class="length-container">
                 <p>Password Length</p>
-                <p password-lengthNumber>0</p>
+                <p password-lengthNumber></p>
             </div>
 
             <!-- for slider of password length  -->
@@ -66,8 +66,9 @@
              </div>
 
              <!-- generate password  -->
-              <button class="generator-password">Generate Password</button>
+              <button class="generateButton">Generate Password</button>
         </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
