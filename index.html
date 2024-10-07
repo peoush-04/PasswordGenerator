@@ -11,65 +11,69 @@
     <!-- then we have a heading "Password Generator"  -->
     <!-- then we have a display-container which has a input field where we will display the password generator and then a copy image button at the right-end of this container  -->
      <!-- when we click on this copy button then a "copied!" msg gets display just above it , so keep the "Copied" msg in a span tag inside the button   -->
-    <div class="container">
 
-        <h1>Password Generator</h1>
-        
-        <div class="display-container">
-            <!-- till now we used class name , id name or tag name to access html in js but now we r using custom attribute to access html element in js  -->
-             <!-- here the custom attribute used is named as "data-passwordDisplay" -->
-            <input readonly type="text" name="display" placeholder="PASSWORD" data-passwordDisplay>
-            <button data-copy>
-                <span data-copyMsg></span>
-                <img src="./assets/copy.svg" alt="copy" width="23" height="23">
-            </button>
-        </div>
+     <div class="wrapper">
+        <div class="container">
 
-        <div class="input-container">
-
-            <!-- password length  -->
-            <div class="length-container">
-                <p>Password Length</p>
-                <p password-lengthNumber>10</p>
+            <h2>Password Generator</h2>
+            
+            <div class="display-container">
+                <!-- till now we used class name , id name or tag name to access html in js but now we r using custom attribute to access html element in js  -->
+                 <!-- here the custom attribute used is named as "data-passwordDisplay" -->
+                <input readonly type="text" name="display" placeholder="PASSWORD" data-passwordDisplay>
+                <button data-copy>
+                    <span data-copyMsg></span>
+                    <img src="./assets/copy.svg" alt="copy" width="23" height="23">
+                </button>
             </div>
-
-            <!-- for slider of password length  -->
-             <!-- step=1 means it will increment or decrement by step = 1 -->
-            <input type="range" min="1" max="20" class="slider" step="1" password-length-slider>
-
-            <!-- checkboxes -->
-            <div class="checkboxes">
-                <div>
-                    <input type="checkbox" id="uppercase">
-                    <label for="uppercase">Includes Uppercase letters</label>
+    
+            <div class="input-container">
+    
+                <!-- password length  -->
+                <div class="length-container">
+                    <p>Password Length</p>
+                    <p password-lengthNumber>10</p>
+                </div>
+    
+                <!-- for slider of password length  -->
+                 <!-- step=1 means it will increment or decrement by step = 1 -->
+                <input type="range" min="1" max="20" class="slider" step="1" password-length-slider>
+    
+                <!-- checkboxes -->
+                <div class="checkboxes">
+                    <div>
+                        <input type="checkbox" id="uppercase">
+                        <label for="uppercase">Includes Uppercase letters</label>
+                     </div>
+    
+                     <div>
+                        <input type="checkbox" id="lowercase">
+                        <label for="lowercase">Includes Lowercase letters</label>
+                     </div>
+    
+                     <div>
+                        <input type="checkbox" id="numbers">
+                        <label for="numbers">Includes Numbers</label>
+                     </div>
+    
+                     <div>
+                        <input type="checkbox" id="symbols">
+                        <label for="symbols">Includes Symbols</label>
+                     </div>
+                </div>
+                 
+                <!-- strength-container  -->
+                 <div class="strength-container">
+                    <div>Strength</div>
+                    <div class="indicator" password-strength-indicator></div>
                  </div>
-
-                 <div>
-                    <input type="checkbox" id="lowercase">
-                    <label for="lowercase">Includes Lowercase letters</label>
-                 </div>
-
-                 <div>
-                    <input type="checkbox" id="numbers">
-                    <label for="numbers">Includes Numbers</label>
-                 </div>
-
-                 <div>
-                    <input type="checkbox" id="symbols">
-                    <label for="symbols">Includes Symbols</label>
-                 </div>
+    
+                 <!-- generate password  -->
+                  <button class="generateButton">Generate Password</button>
             </div>
-             
-            <!-- strength-container  -->
-             <div class="strength-container">
-                <div>Strength</div>
-                <div class="indicator" password-strength-indicator></div>
-             </div>
-
-             <!-- generate password  -->
-              <button class="generateButton">Generate Password</button>
         </div>
-    </div>
+     </div>
+    
     <script src="./scriptnew.js"></script>
 </body>
 </html>

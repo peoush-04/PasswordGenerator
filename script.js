@@ -1,3 +1,4 @@
+// this is the script.js written by Babbar bhaiya 
 // syntax for custom attribute selector 
 const inputSlider=document.querySelector("[password-length-slider]");
 const lengthDisplay = document.querySelector("[password-lengthNumber]");

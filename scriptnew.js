@@ -1,3 +1,4 @@
+// my own js file written by me using my logic 
 const inputSlider=document.querySelector("[password-length-slider]");
 const copyBtn = document.querySelector("[data-copy]");
 const copyMsg = document.querySelector("[data-copyMsg]");
