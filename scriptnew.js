@@ -39,8 +39,7 @@ async function copyMsgHandler(){
     copyMsg.classList.add("active");
 
     setTimeout(()=>{
-        // copyMsg.classList.remove("active");
-        copyMsg.innerHTML="";
+        copyMsg.classList.remove("active");
     },2000);
 }
 copyBtn.addEventListener("click",()=>{

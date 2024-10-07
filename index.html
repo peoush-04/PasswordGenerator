@@ -20,9 +20,9 @@
             <div class="display-container">
                 <!-- till now we used class name , id name or tag name to access html in js but now we r using custom attribute to access html element in js  -->
                  <!-- here the custom attribute used is named as "data-passwordDisplay" -->
-                <input readonly type="text" name="display" placeholder="PASSWORD" data-passwordDisplay>
-                <button data-copy>
-                    <span data-copyMsg></span>
+                <input readonly type="text" class="display" placeholder="PASSWORD" data-passwordDisplay>
+                <button data-copy class="copyBtn">
+                    <span data-copyMsg class="data-copyMsg"></span>
                     <img src="./assets/copy.svg" alt="copy" width="23" height="23">
                 </button>
             </div>
@@ -37,7 +37,7 @@
     
                 <!-- for slider of password length  -->
                  <!-- step=1 means it will increment or decrement by step = 1 -->
-                <input type="range" min="1" max="20" class="slider" step="1" password-length-slider>
+                <input type="range" min="1" max="20" class="slider" step="1" password-length-slider >
     
                 <!-- checkboxes -->
                 <div class="checkboxes">
