@@ -127,6 +127,12 @@ h2{
     height: 12px;
     border: 2px solid var(--mint);
     border-radius: 3px;
+    cursor: pointer;
+}
+
+/* when input is :checked then change it's bg-color  */
+.checkboxes div input:checked{
+    background-color: var(--mint);
 }
 
 /* once input is checked then put a tick in the checkbox and change the bg color  */
@@ -134,14 +140,10 @@ h2{
 .checkboxes div input:checked::before{
     content: '✔';
     position: absolute;
-    background-color: var(--mint);
     color: #b49eff;
     font-size: 0.7rem;
     left: -1px;
     top: -2px;
-    height: 13px;
-    width: 12px;
-    border-radius: 3px;
 }
 
 .strength-container{
