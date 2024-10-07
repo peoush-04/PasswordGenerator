@@ -104,11 +104,51 @@ h2{
 }
 
 .slider {
-    background-color: #b0d8f9;
     /* to remove the default style/look of the slider , use appearance: :none; */
     appearance: none;
+    background-color: #b0d8f9;
+    height: 14px;
     border-radius: 15px;
     cursor: pointer;
+}
+
+/* to access the thumb of the slider use this pseudo selector ::-webkit-slider-thumb  */
+.slider::-webkit-slider-thumb{
+    /* remove the default appereance of the thumb  */
+    appearance: none;
+    height: 24px;
+    width: 24px;
+    background-color: rgb(62, 138, 193);
+    box-shadow: 0px 0px 15px 0px rgb(255, 255, 255);
+    border-radius: 25px;
+    /* to set the z-index must make its position relative  */
+    position: relative;
+    z-index: 1;
+}
+
+/* the -webkit pseudo selector wont work in firefox , for firefox use -mox-range-thumb pseudo selector  */
+/* slider::-webkit-slider-thumb{
+    /* remove the default appereance of the thumb  */
+    /* appearance: none; */
+    /* height: 24px; */
+    /* width: 24px; */
+    /* background-color: rgb(62, 138, 193); */
+    /* box-shadow: 0px 0px 15px 0px rgb(255, 255, 255); */
+    /* border-radius: 25px; */
+    /* to set the z-index must make its position relative  */
+    /* position: relative; */
+    /* z-index: 1; */
+/* } */ 
+
+
+/* //when we click the slider and drag it (means slider:focus) then give an outline  */
+.slider:focus{
+    outline: 3px solid var(--mint);
+    transform: scale(1.02);
+}
+
+.slider::-webkit-slider-thumb:hover{
+    box-shadow: 0px 0px 20px 0px rgb(62, 138, 193);
 }
 
 .checkboxes{
@@ -123,8 +163,8 @@ h2{
     position: relative;
     /* we remove the default style of the checkboxes and made a box of width n height 12px width border --mint and radius 3px  */
     appearance: none;
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border: 2px solid var(--mint);
     border-radius: 3px;
     cursor: pointer;
@@ -135,14 +175,15 @@ h2{
     background-color: var(--mint);
 }
 
-/* once input is checked then put a tick in the checkbox and change the bg color  */
+/* once input is checked then put a tick in the checkbox  */
 /* we used ::before to put the tick and used absolute positioning to place it properly  */
 .checkboxes div input:checked::before{
     content: '✔';
     position: absolute;
     color: #b49eff;
-    font-size: 0.7rem;
-    left: -1px;
+    font-size: 0.73rem;
+    font-weight: 900;
+    left: 1px;
     top: -2px;
 }
 
@@ -158,6 +199,7 @@ h2{
     height: 18px;
     border-radius: 15px;
     background-color: #cccaca;
+    box-shadow: 0px 0px 20px 0 white;
 }
 
 .generateButton{

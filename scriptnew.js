@@ -155,8 +155,10 @@ function shufflePassword(array) {
 function calcStrength(password,checked){
     if(checked>=2 && password.length>=8 || (password.length>=15)){
         indicator.style.backgroundColor="green";
+        indicator.style.boxShadow="0px 0px 20px 0px green";
     }
     else{
         indicator.style.backgroundColor="red";
+        indicator.style.boxShadow="0px 0px 20px 0px red";
     }
 }
