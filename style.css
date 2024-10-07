@@ -6,6 +6,7 @@
 }
 
 :root{
+    /* these are my global variables  */
     --blue:#106EBE;
     --mint:#0FFCBE;
     --lightblue:rgb(59, 191, 248);
@@ -40,7 +41,8 @@ h2{
     background-color: var(--lightblue);
 }
 
-/* to remove the background of the input tag and its border use these lines  */
+/* to remove the background of the input tag and its border use these lines like background-color: transparent;
+           border:none;*/
 .display{
     background-color: transparent;
     border:none;
@@ -59,6 +61,7 @@ h2{
 
 .copyBtn{
     position: relative;
+    /* to remove the default style of the button  */
     background-color: transparent;
     border:none;
     outline:none;
@@ -102,6 +105,7 @@ h2{
 
 .slider {
     background-color: #b0d8f9;
+    /* to remove the default style/look of the slider , use appearance: :none; */
     appearance: none;
     border-radius: 15px;
     cursor: pointer;
@@ -117,6 +121,7 @@ h2{
 
 .checkboxes div input{
     position: relative;
+    /* we remove the default style of the checkboxes and made a box of width n height 12px width border --mint and radius 3px  */
     appearance: none;
     width: 12px;
     height: 12px;
@@ -124,6 +129,8 @@ h2{
     border-radius: 3px;
 }
 
+/* once input is checked then put a tick in the checkbox and change the bg color  */
+/* we used ::before to put the tick and used absolute positioning to place it properly  */
 .checkboxes div input:checked::before{
     content: '✔';
     position: absolute;
